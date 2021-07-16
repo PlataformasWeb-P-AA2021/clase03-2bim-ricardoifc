@@ -86,7 +86,7 @@ def eliminar_estudiante(request, id):
     return redirect(index)
 
 
-def crear_numero_telefonico(request, id):
+def crear_numero_telefonico(request):
     """
     """
 

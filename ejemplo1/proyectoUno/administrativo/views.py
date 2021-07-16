@@ -25,7 +25,10 @@ def listadoEstudiantes(request):
     # en la variable tipo diccionario llamada informacion_template
     # se agregará la información que estará disponible
     # en el template
-    informacion_template = {'estudiantes': estudiantes, 'numero_estudiantes': len(estudiantes)}
+    titulo = "Listado de estudiantes de mi aplicación"
+    informacion_template = {'estudiantes': estudiantes,
+    'numero_estudiantes': len(estudiantes), 'mititulo': titulo} 
+    # informacion_template = {'estudiantes': estudiantes, 'numero_estudiantes': len(estudiantes)}
     return render(request, 'listadoEstudiantes.html', informacion_template)
     
 
@@ -35,9 +38,13 @@ def listadoEstudiantesDos(request):
     obtenidos de la base de datos.
     """
     estudiantes = Estudiante.objects.all()
+    mis_numeros_telefonicos = NumeroTelefonico.objects.all()
+    
     # en la variable tipo diccionario llamada informacion_template
     # se agregará la información que estará disponible
     # en el template
-    informacion_template = {'estudiantes': estudiantes, 'numero_estudiantes': len(estudiantes)}
+    informacion_template = {'estudiantes': estudiantes, 
+    'numero_estudiantes': len(estudiantes),
+    'mis_numeros_telefonicos': mis_numeros_telefonicos}
     return render(request, 'listadoEstudiantesDos.html', informacion_template)
  

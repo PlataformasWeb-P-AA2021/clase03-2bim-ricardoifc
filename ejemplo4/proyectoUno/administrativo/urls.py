@@ -13,7 +13,7 @@ urlpatterns = [
             name='obtener_estudiante'),
         path('crear/estudiante', views.crear_estudiante, 
             name='crear_estudiante'),
-        path('editar_estudiante/<int:id>', views.editar_estudiante, 
+        path('editar/estudiante/<int:id>', views.editar_estudiante, 
             name='editar_estudiante'),
         path('eliminar/estudiante/<int:id>', views.eliminar_estudiante, 
             name='eliminar_estudiante'),

@@ -7,9 +7,15 @@
   <ul>
   {% for numero in e.numerotelefonico_set.all%}
       <li>
-          Número telefónico {{numero}}<br/>
+          Número telefónico {{numero.telefono}}<br/>
       </li>
   {% endfor %}
   </ul>
   <br/>
 {% endfor %}
+
+<hr>
+
+{% for e in mis_numeros_telefonicos %}
+  {{ e }} <br>
+  {% endfor %}

@@ -1,9 +1,10 @@
+<h3>{{ mititulo }}</h3>
 Número de estudiantes {{ numero_estudiantes }}
 <br/>
 <br/>
 
 {% for e in estudiantes %}
 
-  {{e}}<br/>
+  {{e.cedula}}<br/>
 
 {% endfor %}
